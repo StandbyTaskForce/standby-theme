@@ -15,15 +15,15 @@
       if ($("#"+link).text() == "<?php echo Kohana::lang('ui_main.show'); ?>") {
         $("#"+link).text("<?php echo Kohana::lang('ui_main.hide'); ?>");
         $('#content .floatbox').css('overflow', 'hidden').css('margin-left', '0');
-        $('#map').width('100%');
-        $('#mapStatus').width('100%');
+        $('#map').width('auto');
+        $('#mapStatus').width('auto');
         $('#right').show();
       }
       else {
         $("#"+link).text("<?php echo Kohana::lang('ui_main.show'); ?>");
-        $('#content .floatbox').css('overflow', 'visible').css('margin-left', '7%');
-        $('#map').width('810px');
-        $('#mapStatus').width('810px');
+        $('#content .floatbox').css('overflow', 'visible');
+        $('#map').width('900px');
+        $('#mapStatus').width('900px');
         $('#right').hide();
       }
     }
