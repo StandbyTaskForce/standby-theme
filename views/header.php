@@ -54,6 +54,9 @@
   echo '<body id="page" class="'.$body_class.'" />';
   
 ?>
+
+	<?php echo $header_nav; ?>
+	
 	<!-- wrapper -->
 	<div class="rapidxwpr floatholder">
 
@@ -63,25 +66,13 @@
 			<!-- searchbox -->
 			<div id="searchbox">
 				
-				<!-- user actions -->
-				<div id="loggedin_user_action" class="clearingfix">
-					<?php if($loggedin_username != FALSE){ ?>
-						<a href="<?php echo url::site().$loggedin_role;?>"><?php echo $loggedin_username; ?></a> [<a href="<?php echo url::site();?>logout/front"><?php echo Kohana::lang('ui_admin.logout');?></a>]
-					<?php } else { ?>
-						<a href="<?php echo url::site()."members/";?>"><?php echo Kohana::lang('ui_main.login'); ?></a>
-					<?php } ?>
-				</div><br/>
-				<!-- / user actions -->
+				<!-- languages -->
+				<?php echo $languages;?>
+				<!-- / languages -->
 				
-        <div id="searchbox-wrapper">
-          <!-- languages -->
-          <?php echo $languages;?>
-          <!-- / languages -->
-
-          <!-- searchform -->
-          <?php echo $search; ?>
-          <!-- / searchform -->
-        </div>
+				<!-- searchform -->
+				<?php echo $search; ?>
+				<!-- / searchform -->
 
 			</div>
 			<!-- / searchbox -->
